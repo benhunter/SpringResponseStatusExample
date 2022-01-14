@@ -18,16 +18,8 @@ class ControllerTest {
     @Autowired
     MockMvc mvc;
 
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
     @Test
-    void respondsWithBadRequest() throws Exception {
+    void controllerRespondsWithBadRequest() throws Exception {
         RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/")
                 .content("BAD CONTENT");
         this.mvc.perform(requestBuilder)
